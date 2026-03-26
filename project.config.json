@@ -1,0 +1,17 @@
+{
+  "description": "宠物智能出行 MVP",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.6.5",
+  "appid": "touristappid",
+  "projectname": "pet-smart-travel-miniapp"
+}

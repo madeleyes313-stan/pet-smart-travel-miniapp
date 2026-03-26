@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/trip/index",
+    "pages/risk/index",
+    "pages/pet/index",
+    "pages/profile/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "宠物智能出行",
+    "navigationBarBackgroundColor": "#FFDDB3",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#FFF8F0"
+  },
+  "tabBar": {
+    "color": "#7A6A5A",
+    "selectedColor": "#FF7A59",
+    "backgroundColor": "#FFF5EA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/trip/index",
+        "text": "行程"
+      },
+      {
+        "pagePath": "pages/risk/index",
+        "text": "风险"
+      },
+      {
+        "pagePath": "pages/pet/index",
+        "text": "宠物"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

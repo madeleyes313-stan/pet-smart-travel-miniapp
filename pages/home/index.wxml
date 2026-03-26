@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <view class="title {{largeFont ? 'large-font' : ''}}">🐶 宠物智能出行助手</view>
+    <view class="subtitle {{largeFont ? 'large-font' : ''}}">可问、可规划、可预警、可执行</view>
+    <view class="button-soft" bindtap="toggleSimpleMode">{{simpleMode ? '退出简化模式' : '一键简化模式'}}</view>
+    <view class="button-soft" bindtap="toggleLargeFont">{{largeFont ? '普通字号' : '大字号模式'}}</view>
+  </view>
+
+  <view class="card">
+    <view class="label">输入问题（支持上传图像/视频/音频）</view>
+    <textarea class="textarea" placeholder="例如：这株植物狗狗误食有危险吗？" value="{{question}}" bindinput="onQuestionInput" auto-height="true"/>
+    <view class="button-soft" bindtap="mockVoiceInput">🎤 语音输入（演示）</view>
+    <view class="button-primary" bindtap="submitQa">智能问答</view>
+  </view>
+
+  <view class="card" wx:if="{{qaResult.answer}}">
+    <view class="title">AI 回答</view>
+    <view class="subtitle">{{qaResult.answer}}</view>
+    <view class="label">风险等级</view>
+    <view class="badge {{qaResult.observation.level === 'red' ? 'badge-red' : qaResult.observation.level === 'yellow' ? 'badge-yellow' : 'badge-green'}}">{{qaResult.observation.level}}</view>
+    <view class="subtitle">置信度：{{qaResult.observation.confidence}}</view>
+    <view class="subtitle">建议：{{qaResult.observation.recommendation}}</view>
+    <view class="subtitle">声明：{{qaResult.non_diagnostic_disclaimer}}</view>
+    <view class="button-primary" bindtap="goEmergency">{{qaResult.one_click_vet_button.label}}</view>
+  </view>
+</view>

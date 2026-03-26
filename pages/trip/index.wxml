@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="card">
+    <view class="title">🧭 行程自动规划</view>
+    <view class="label">出发地</view>
+    <input class="input" value="{{form.origin}}" data-field="origin" bindinput="onInput" />
+
+    <view class="label">目的地</view>
+    <input class="input" value="{{form.destination}}" data-field="destination" bindinput="onInput" />
+
+    <view class="label">预算（元）</view>
+    <input class="input" type="number" value="{{form.budget}}" data-field="budget" bindinput="onInput" />
+
+    <view class="button-primary" bindtap="planTrip">生成计划</view>
+  </view>
+
+  <view class="card" wx:if="{{plan.trip_id}}">
+    <view class="title">行程建议</view>
+    <view class="subtitle">宠物友好评分：{{plan.destination_pet_friendly_score}}</view>
+    <view class="subtitle">预估预算：{{plan.estimated_budget_cny}} 元</view>
+    <view class="subtitle">建议时长：{{plan.duration_hours}} 小时</view>
+
+    <view class="label">装备清单</view>
+    <block wx:for="{{plan.packing_list}}" wx:key="*this">
+      <view class="subtitle">- {{item}}</view>
+    </block>
+
+    <view class="label">风险提示</view>
+    <block wx:for="{{plan.risk_summary}}" wx:key="*this">
+      <view class="subtitle">- {{item}}</view>
+    </block>
+
+    <view class="button-soft" bindtap="getBooking">查看酒店/交通推荐</view>
+  </view>
+
+  <view class="card" wx:if="{{booking.results}}">
+    <view class="title">轻闭环预订推荐</view>
+    <view class="subtitle">{{booking.notice}}</view>
+
+    <view class="label">酒店</view>
+    <block wx:for="{{booking.results.hotels}}" wx:key="name">
+      <view class="subtitle">- {{item.name}}</view>
+      <view class="subtitle">{{item.deep_link}}</view>
+    </block>
+
+    <view class="label">交通</view>
+    <block wx:for="{{booking.results.transport}}" wx:key="name">
+      <view class="subtitle">- {{item.name}}</view>
+      <view class="subtitle">{{item.deep_link}}</view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+page {
+  background: linear-gradient(180deg, #fff8ef 0%, #fffbf6 100%);
+  color: #3d2f25;
+  font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #fff8f1;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 8rpx 20rpx rgba(255, 166, 93, 0.12);
+  border: 2rpx solid #ffe0bc;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #5b3e2e;
+}
+
+.subtitle {
+  margin-top: 10rpx;
+  color: #8f6f5a;
+  font-size: 28rpx;
+}
+
+.label {
+  color: #7c5b46;
+  margin-bottom: 8rpx;
+  font-size: 28rpx;
+}
+
+.input,
+.textarea,
+.picker {
+  background: #ffffff;
+  border: 2rpx solid #ffd8b2;
+  border-radius: 18rpx;
+  padding: 18rpx;
+  font-size: 30rpx;
+}
+
+.button-primary {
+  background: linear-gradient(120deg, #ff9a62, #ff7a59);
+  color: #fff;
+  border-radius: 999rpx;
+  padding: 18rpx 24rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 16rpx;
+}
+
+.button-soft {
+  background: #ffe8cf;
+  color: #6b4f3f;
+  border-radius: 999rpx;
+  padding: 16rpx 22rpx;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 12rpx;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8rpx 14rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+
+.badge-green {
+  background: #dcf7e8;
+  color: #2f7a56;
+}
+
+.badge-yellow {
+  background: #fff3d9;
+  color: #9a6a00;
+}
+
+.badge-red {
+  background: #ffe2de;
+  color: #a7372b;
+}
+
+.large-font {
+  font-size: 34rpx !important;
+}

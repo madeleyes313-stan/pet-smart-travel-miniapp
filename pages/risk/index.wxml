@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="card">
+    <view class="title">⚠️ 户外风险提醒</view>
+    <view class="label">当前位置/目的地</view>
+    <input class="input" value="{{location}}" bindinput="onLocationInput" />
+    <view class="button-primary" bindtap="evaluateRisk">立即评估风险</view>
+  </view>
+
+  <view class="card" wx:if="{{risk.id}}">
+    <view class="title">风险评估结果</view>
+    <view class="badge {{risk.level === 'red' ? 'badge-red' : risk.level === 'yellow' ? 'badge-yellow' : 'badge-green'}}">{{risk.level}}</view>
+    <view class="subtitle">类型：{{risk.risk_type}}</view>
+    <view class="subtitle">建议：{{risk.suggestion}}</view>
+    <view class="subtitle">应急：{{risk.emergency_action}}</view>
+    <view class="button-soft" bindtap="subscribeAlerts">订阅提醒（推送/短信/日历）</view>
+    <view class="button-primary" bindtap="loadEmergencyPlan">查看应急预案</view>
+  </view>
+
+  <view class="card" wx:if="{{emergency.location}}">
+    <view class="title">应急预案</view>
+    <view class="subtitle">位置：{{emergency.location}}</view>
+    <view class="label">附近医院</view>
+    <block wx:for="{{emergency.nearby_hospitals}}" wx:key="name">
+      <view class="subtitle">- {{item.name}}（{{item.distance}}）{{item.phone}}</view>
+    </block>
+    <view class="label">急救步骤</view>
+    <block wx:for="{{emergency.first_aid_steps}}" wx:key="*this">
+      <view class="subtitle">- {{item}}</view>
+    </block>
+  </view>
+</view>

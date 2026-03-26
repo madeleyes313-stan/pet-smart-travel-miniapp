@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card">
+    <view class="title">👤 我的设置</view>
+    <view class="subtitle">授权管理：位置、相册/麦克风、日历、通知、短信</view>
+    <view class="button-soft" bindtap="requestLocation">申请位置授权</view>
+    <view class="button-soft" bindtap="requestRecord">申请录音授权</view>
+    <view class="button-soft" bindtap="requestAlbum">申请相册授权</view>
+  </view>
+
+  <view class="card">
+    <view class="title">可访问性</view>
+    <view class="subtitle">为老人、小孩、成年人提供低门槛交互</view>
+    <view class="button-soft" bindtap="toggleSimpleMode">切换简化模式</view>
+    <view class="button-soft" bindtap="toggleLargeFont">切换大字号</view>
+  </view>
+
+  <view class="card">
+    <view class="title">商业化位（预留）</view>
+    <view class="subtitle">品牌广告与联名活动在此展示，不打断关键流程。</view>
+  </view>
+
+  <view class="card" wx:if="{{enableDemoTools}}">
+    <view class="title">运营演示模式</view>
+    <view class="subtitle">用于联调投递看板数据，建议仅开发环境启用</view>
+    <view class="button-soft" bindtap="seedSuccessMode">一键造数（成功为主）</view>
+    <view class="button-soft" bindtap="seedStressMode">一键造数（故障压测）</view>
+  </view>
+</view>

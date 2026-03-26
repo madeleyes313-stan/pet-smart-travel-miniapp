@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="card">
+    <view class="title">🐾 多宠物管理</view>
+    <view class="label">宠物名称</view>
+    <input class="input" value="{{form.name}}" data-field="name" bindinput="onInput" />
+
+    <view class="label">品种</view>
+    <input class="input" value="{{form.breed}}" data-field="breed" bindinput="onInput" />
+
+    <view class="label">年龄（岁）</view>
+    <input class="input" type="number" value="{{form.age_years}}" data-field="age_years" bindinput="onInput" />
+
+    <view class="label">体重（kg）</view>
+    <input class="input" type="number" value="{{form.weight_kg}}" data-field="weight_kg" bindinput="onInput" />
+
+    <view class="label">肩高（cm）</view>
+    <input class="input" type="number" value="{{form.shoulder_height_cm}}" data-field="shoulder_height_cm" bindinput="onInput" />
+
+    <view class="button-primary" bindtap="savePet">保存宠物档案</view>
+  </view>
+
+  <view class="card" wx:if="{{pet.id}}">
+    <view class="title">宠物画像</view>
+    <view class="subtitle">名称：{{pet.name}}</view>
+    <view class="subtitle">品种：{{pet.breed}}</view>
+    <view class="subtitle">风格：{{pet.ai_portrait.outdoor_style}}</view>
+    <view class="subtitle">精力：{{pet.ai_portrait.energy}}</view>
+    <view class="subtitle">社交：{{pet.ai_portrait.social}}</view>
+  </view>
+</view>
