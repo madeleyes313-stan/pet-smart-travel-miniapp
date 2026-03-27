@@ -8,12 +8,12 @@
 - [x] GitHub Secret Scanning 告警已处置并关闭
 
 ## B. 微信公众平台配置
-- [ ] 小程序主体信息完整（名称、头像、简介）
-- [ ] `request` 合法域名已配置：`https://api.pettravel.com`
-- [ ] `uploadFile` 合法域名已配置：`https://upload.pettravel.com`
-- [ ] `downloadFile` 合法域名已配置：`https://cdn.pettravel.com`
-- [ ] `socket` 合法域名已配置：`wss://ws.pettravel.com`
-- [ ] 隐私政策与用户协议链接已配置并可访问
+- [x] 小程序主体信息完整（名称、头像、简介）
+- [x] `request` 合法域名已配置：`https://api.pettravel.com`
+- [x] `uploadFile` 合法域名已配置：`https://upload.pettravel.com`
+- [x] `downloadFile` 合法域名已配置：`https://cdn.pettravel.com`
+- [x] `socket` 合法域名已配置：`wss://ws.pettravel.com`
+- [x] 隐私政策与用户协议链接已配置并可访问
 
 ## C. 开发者工具与提审包
 - [ ] 本地微信开发者工具绑定真实 AppID
@@ -39,5 +39,5 @@
 ---
 
 ## 本次推进记录（2026-03-27）
-- 已完成：A1/A2/A3/A4/A5
-- 下一阶段：B（微信后台域名与隐私）、C（提审包素材）、D（上线前冒烟）
+- 已完成：A1/A2/A3/A4/A5，B1/B2/B3/B4/B5/B6
+- 下一阶段：C（提审包素材）、D（上线前冒烟）、E（发布后验证）
