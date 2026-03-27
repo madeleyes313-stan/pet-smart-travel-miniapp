@@ -5,7 +5,7 @@
 - [x] 真实 `AppID/AppSecret` 仅存在本地安全配置，不在公开仓库
 - [x] `release/WECHAT_REVIEW_NOTE_v1.0.0.md` 已准备
 - [x] 已打标签 `v1.0.0`
-- [ ] GitHub Secret Scanning 告警已处置并关闭
+- [x] GitHub Secret Scanning 告警已处置并关闭
 
 ## B. 微信公众平台配置
 - [ ] 小程序主体信息完整（名称、头像、简介）
@@ -39,5 +39,5 @@
 ---
 
 ## 本次推进记录（2026-03-27）
-- 已完成：A1/A2/A3/A4
-- 待你手工操作：A5（GitHub告警页面点击关闭）、B/C/D/E
+- 已完成：A1/A2/A3/A4/A5
+- 下一阶段：B（微信后台域名与隐私）、C（提审包素材）、D（上线前冒烟）
