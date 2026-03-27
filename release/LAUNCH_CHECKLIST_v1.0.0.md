@@ -1,10 +1,10 @@
 # 微信小程序上线检查清单（v1.0.0）
 
 ## A. 代码与仓库
-- [ ] `project.config.json` 使用占位 `appid`（`touristappid`）
-- [ ] 真实 `AppID/AppSecret` 仅存在本地安全配置，不在公开仓库
-- [ ] `release/WECHAT_REVIEW_NOTE_v1.0.0.md` 已准备
-- [ ] 已打标签 `v1.0.0`
+- [x] `project.config.json` 使用占位 `appid`（`touristappid`）
+- [x] 真实 `AppID/AppSecret` 仅存在本地安全配置，不在公开仓库
+- [x] `release/WECHAT_REVIEW_NOTE_v1.0.0.md` 已准备
+- [x] 已打标签 `v1.0.0`
 - [ ] GitHub Secret Scanning 告警已处置并关闭
 
 ## B. 微信公众平台配置
@@ -35,3 +35,9 @@
 - [ ] 接口监控无明显 4xx/5xx 抖动
 - [ ] 投递可观测面板指标正常（成功率、失败原因、DLQ 趋势）
 - [ ] 搜索可见性按预期开启（需等待索引生效）
+
+---
+
+## 本次推进记录（2026-03-27）
+- 已完成：A1/A2/A3/A4
+- 待你手工操作：A5（GitHub告警页面点击关闭）、B/C/D/E
